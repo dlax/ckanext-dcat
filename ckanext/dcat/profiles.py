@@ -9,7 +9,12 @@ import rdflib
 from rdflib import URIRef, BNode, Literal
 from rdflib.namespace import Namespace, RDF, XSD, SKOS, RDFS
 
-from geomet import wkt, InvalidGeoJSONException
+try:
+    from geomet import wkt, InvalidGeoJSONException
+except ImportError:
+    from shapely import wkt
+    class InvalidGeoJSONException(Exception):
+        pass
 
 from ckan.plugins import toolkit
 
