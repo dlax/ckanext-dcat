@@ -39,7 +39,7 @@ setup(
     [ckan.rdf.profiles]
     euro_dcat_ap=ckanext.dcat.profiles:EuropeanDCATAPProfile
     eurovoc_groups_dcat_ap=ckanext.dcat.skosprofile:EurovocGroupsDCATAPProfile
-    labeled_concepts_dcat_ap=ckanext.dcat.skosprofile:LabeledConceptsDCATAPProfil
+    labeled_concepts_dcat_ap=ckanext.dcat.skosprofile:LabeledConceptsDCATAPProfile
 
     [paste.paster_command]
     generate_static = ckanext.dcat.commands:GenerateStaticDCATCommand
