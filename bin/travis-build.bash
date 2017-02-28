@@ -15,6 +15,12 @@ then
     git checkout release-v$CKANVERSION-latest
 fi
 python setup.py develop
+
+
+# TODO: remove once 2.5.3 is relesed
+# Pin this as newer versions installed by RDFLib give setuptools troubles
+pip install "html5lib==0.9999999"
+
 pip install -r requirements.txt --allow-all-external
 pip install -r dev-requirements.txt --allow-all-external
 cd -
