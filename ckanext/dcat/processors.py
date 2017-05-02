@@ -171,7 +171,7 @@ class RDFParser(RDFProcessor):
         yielded, so it can be further modified by each one of them.
 
         Returns a dataset dict that can be passed to eg `package_create`
-        or `package_update`
+        or `package_patch`
         '''
         for dataset_ref in self._datasets():
             dataset_dict = {}

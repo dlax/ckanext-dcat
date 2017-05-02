@@ -365,7 +365,7 @@ class DCATHarvester(HarvesterBase):
         elif status == 'change':
 
             package_dict['id'] = harvest_object.package_id
-            package_id = p.toolkit.get_action('package_update')(context, package_dict)
+            package_id = p.toolkit.get_action('package_patch')(context, package_dict)
             log.info('Updated dataset with id %s', package_id)
 
         model.Session.commit()

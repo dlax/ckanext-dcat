@@ -582,7 +582,7 @@ class RDFProfile(object):
         that can be used to reference the dataset when querying the graph.
 
         Returns a dataset dict that can be passed to eg `package_create`
-        or `package_update`
+        or `package_patch`
         '''
         return dataset_dict
 

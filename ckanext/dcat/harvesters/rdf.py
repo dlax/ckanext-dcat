@@ -312,7 +312,7 @@ class DCATRDFHarvester(DCATHarvester):
                     harvest_object.package_id = dataset['id']
                     harvest_object.add()
 
-                    p.toolkit.get_action('package_update')(context, dataset)
+                    p.toolkit.get_action('package_patch')(context, dataset)
                 else:
                     log.info('Ignoring dataset %s' % existing_dataset['name'])
                     return 'unchanged'

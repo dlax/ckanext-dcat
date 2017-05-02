@@ -62,7 +62,7 @@ class IDCATRDFHarvester(Interface):
 
     def before_update(self, harvest_object, dataset_dict, temp_dict):
         '''
-        Called just before the ``package_update`` action.
+        Called just before the ``package_patch`` action.
         It may be used to preprocess the dataset dict.
 
         If the content of the dataset dict is emptied (i.e. set to ``None``), 
@@ -85,7 +85,7 @@ class IDCATRDFHarvester(Interface):
 
     def after_update(self, harvest_object, dataset_dict, temp_dict):
         '''
-        Called just after a successful ``package_update`` action has been
+        Called just after a successful ``package_patch`` action has been
         performed.
 
         :param harvest_object: A ``HarvestObject`` domain object.
